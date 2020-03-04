@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>富文本</title>
+    <script type="text/javascript" src="/static/tiny_mce/tiny_mce.js"></script>
+    <!--这里的/tiny_mce/tiny_mce.js是自动生成的，我们不用管-->
+    <script type="text/javascript">
+        tinyMCE.init({   // 调用的方法，初始化富文本
+            'mode':'textareas',
+            'theme':'advanced',
+            'width':800,
+            'height':600,
+        })
+    </script>
+</head>
+<body>
+    <form action="/saveedit/" method="post">
+        <!--再写一个url匹配这个，然后再写一个views.py接收这个数据，接收后存入数据库-->
+        <textarea name="str"> baby is girl</textarea>
+        <input type="submit" value="提交"/>
+    </form>
+</body>
+</html>
